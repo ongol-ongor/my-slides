@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10233f">
+<title>이음시 청년정책 담당 지원 포트폴리오</title>
+
+<style>
+:root {
+  --navy: #10233f;
+  --blue: #225ce0;
+  --light-blue: #edf3ff;
+  --background: #f7f9fc;
+  --white: #ffffff;
+  --text: #202c40;
+  --muted: #5d6c82;
+  --border: #dce5f1;
+  --green: #08755d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    system-ui,
+    sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+.container {
+  width: min(100% - 40px, 840px);
+  margin: auto;
+}
+
+section {
+  padding: 90px 0;
+  scroll-margin-top: 24px;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--blue);
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(38px, 8vw, 65px);
+  line-height: 1.3;
+  letter-spacing: -1.8px;
+  font-weight: 850;
+}
+
+h2 {
+  font-size: clamp(32px, 6vw, 43px);
+  line-height: 1.35;
+  letter-spacing: -1.2px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 1.45;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.85;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.stack {
+  display: grid;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px;
+}
+
+/* 1. 첫 화면 */
+
+.hero {
+  min-height: 92svh;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      #31538d 0%,
+      transparent 45%
+    ),
+    var(--navy);
+}
+
+.hero .section-label {
+  color: #a6c4ff;
+}
+
+.role {
+  display: inline-block;
+  padding: 10px 17px;
+  margin-bottom: 32px;
+  border: 1px solid #7590bb;
+  border-radius: 100px;
+  color: #e0eaff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #91b6ff;
+}
+
+.hero-description {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  color: #dce6f6;
+  font-size: 21px;
+  line-height: 1.85;
+  max-width: 650px;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 35px 0 40px;
+}
+
+.hero-metric {
+  padding: 23px 12px;
+  border: 1px solid #ffffff35;
+  border-radius: 15px;
+  background: #ffffff12;
+  text-align: center;
+}
+
+.hero-metric strong {
+  display: block;
+  font-size: 32px;
+  line-height: 1.3;
+  color: white;
+}
+
+.hero-metric span {
+  display: block;
+  margin-top: 10px;
+  color: #dce6f6;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 유일한 버튼 */
+
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 70px;
+  padding: 20px 26px;
+  border: none;
+  border-radius: 15px;
+  background: white;
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+
+.main-button:hover {
+  background: #e5edff;
+  transform: translateY(-2px);
+}
+
+.main-button:focus-visible {
+  outline: 3px solid #95baff;
+  outline-offset: 5px;
+}
+
+/* 2. 강점 */
+
+.strength-number {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.strength-card h3 {
+  margin-bottom: 15px;
+}
+
+.strength-card p {
+  margin-bottom: 0;
+}
+
+/* 3. 산출물 */
+
+.outputs {
+  background: var(--light-blue);
+}
+
+.output-card {
+  border-left: 6px solid var(--blue);
+}
+
+.output-number {
+  display: block;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.output-card h3 {
+  margin: 12px 0 16px;
+}
+
+.output-card p {
+  margin-bottom: 0;
+}
+
+.output-evidence {
+  margin-top: 20px;
+  padding: 15px 18px;
+  background: #f0f5ff;
+  border-radius: 12px;
+  color: #315283;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.note {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 13px;
+  background: #dfeaff;
+  color: #3a5172;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 4. 사례 */
+
+.case-summary {
+  margin-bottom: 32px;
+}
+
+.case-step {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 30px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.case-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 17px;
+  background: var(--light-blue);
+  border-radius: 8px;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.case-step p {
+  margin-bottom: 0;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.metric {
+  padding: 25px 10px;
+  background: var(--light-blue);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.metric strong {
+  display: block;
+  font-size: 36px;
+  color: var(--blue);
+  line-height: 1.25;
+}
+
+.metric span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #455a78;
+}
+
+.result-panel {
+  margin-top: 25px;
+  padding: 24px;
+  background: #eaf7f2;
+  border: 1px solid #bfe4d7;
+  border-radius: 15px;
+}
+
+.result-panel strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 18px;
+}
+
+.result-panel p {
+  margin-bottom: 0;
+}
+
+/* 5. 일하는 태도 */
+
+.attitude {
+  background: var(--navy);
+  color: white;
+}
+
+.attitude .section-label {
+  color: #a6c4ff;
+}
+
+.attitude-item {
+  padding: 30px;
+  border: 1px solid #ffffff2b;
+  border-radius: 20px;
+  background: #ffffff0d;
+}
+
+.attitude-item strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 23px;
+}
+
+.attitude-item p {
+  color: #d7e2f2;
+  margin-bottom: 0;
+}
+
+/* 6. 연락처 */
+
+.contact {
+  text-align: center;
+}
+
+.contact-box {
+  margin-top: 35px;
+  padding: 35px 25px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: white;
+}
+
+.contact-box h3 {
+  margin-bottom: 14px;
+}
+
+.contact-box p {
+  margin-bottom: 0;
+}
+
+.privacy {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 휴대폰 화면 최적화 */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  section {
+    padding: 86px 0;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 90px 0;
+  }
+
+  h1 {
+    font-size: clamp(35px, 9vw, 48px);
+    line-height: 1.34;
+  }
+
+  h2 {
+    font-size: 33px;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
+
+  .card,
+  .case-step,
+  .attitude-item {
+    padding: 28px;
+  }
+
+  .stack {
+    gap: 20px;
+  }
+
+  .hero-metric {
+    padding: 22px 6px;
+  }
+
+  .hero-metric strong {
+    font-size: 29px;
+  }
+
+  .hero-metric span {
+    font-size: 12px;
+  }
+
+  .metric {
+    padding: 22px 6px;
+  }
+
+  .metric strong {
+    font-size: 31px;
+  }
+
+  .metric span {
+    font-size: 12px;
+  }
+
+  .main-button {
+    max-width: none;
+    min-height: 72px;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .hero-metrics,
+  .metric-grid {
+    gap: 7px;
+  }
+
+  .hero-metric strong,
+  .metric strong {
+    font-size: 26px;
+  }
+
+  .hero-metric span,
+  .metric span {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .main-button {
+    transition: none;
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<!-- 1. 첫 화면 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+
+    <span class="section-label">
+      YOUTH POLICY PORTFOLIO
+    </span>
+
+    <div class="role">
+      이음시 청년정책 담당 지원
+    </div>
+
+    <h1 id="hero-title">
+      청년정책 신청 절차의<br>
+      <span>문제를 찾고</span><br>
+      개선 과제로 정리합니다.
+    </h1>
+
+    <p class="hero-description">
+      청년정책 신청 과정에서 막힌 곳 7곳,
+      잘못된 조항 2곳을 확인하고,
+      이용자 5명의 의견을 수집했습니다.
+      이를 문제 정의, 근거 검증,
+      협의와 실행의 관점에서 정리했습니다.
+    </p>
+
+    <div class="hero-metrics">
+
+      <div class="hero-metric">
+        <strong>7곳</strong>
+        <span>신청 절차 불편</span>
+      </div>
+
+      <div class="hero-metric">
+        <strong>2곳</strong>
+        <span>조항 오류</span>
+      </div>
+
+      <div class="hero-metric">
+        <strong>5명</strong>
+        <span>이용자 의견</span>
+      </div>
+
+    </div>
+
+    <button
+      class="main-button"
+      type="button"
+      onclick="showOutputs()"
+      aria-controls="outputs"
+    >
+      산출물 3개 보기 ↓
+    </button>
+
+  </div>
+</section>
+
+<!-- 2. 강점 3가지 -->
+<section id="strengths" aria-labelledby="strengths-title">
+  <div class="container">
+
+    <span class="section-label">
+      01 · CORE STRENGTHS
+    </span>
+
+    <h2 id="strengths-title">
+      세 가지 실무 역량
+    </h2>
+
+    <p class="muted">
+      청년정책 신청 절차 점검 사례를
+      세 가지 역량과 연결했습니다.
+    </p>
+
+    <div class="stack">
+
+      <article class="card strength-card">
+
+        <span class="strength-number">
+          STRENGTH 01
+        </span>
+
+        <h3>문제 정의</h3>
+
+        <p>
+          청년정책 신청 절차에서
+          진행이 막히는 지점 7곳을 확인했습니다.
+          이용자의 불편을 신청 단계별 문제로
+          구분하고 문제 정의서에 정리했습니다.
+        </p>
+
+      </article>
+
+      <article class="card strength-card">
+
+        <span class="strength-number">
+          STRENGTH 02
+        </span>
+
+        <h3>결과 검증</h3>
+
+        <p>
+          정책 공고문과 관련 조항을 대조해
+          잘못된 조항 2곳을 확인했습니다.
+          확인 항목과 근거를 공고문 대조표로
+          정리했습니다.
+        </p>
+
+      </article>
+
+      <article class="card strength-card">
+
+        <span class="strength-number">
+          STRENGTH 03
+        </span>
+
+        <h3>협의와 실행</h3>
+
+        <p>
+          이용자 5명의 의견을 수집했습니다.
+          의견을 유형별로 구분하고
+          개선 과제와 연결해
+          이용자 의견 반영표로 정리했습니다.
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. 산출물 -->
+<section
+  class="outputs"
+  id="outputs"
+  aria-labelledby="outputs-title"
+>
+  <div class="container">
+
+    <span class="section-label">
+      02 · EVIDENCE
+    </span>
+
+    <h2 id="outputs-title">
+      역량을 보여주는<br>
+      산출물 3개
+    </h2>
+
+    <p class="muted">
+      신청 절차의 문제, 공고문 오류,
+      이용자 의견을 각각 문서로 정리했습니다.
+    </p>
+
+    <div class="stack">
+
+      <article class="card output-card">
+
+        <span class="output-number">
+          OUTPUT 01
+        </span>
+
+        <h3>문제 정의서</h3>
+
+        <p>
+          청년정책 신청 과정에서
+          진행이 막히는 지점을 단계별로
+          분류한 자료입니다.
+        </p>
+
+        <div class="output-evidence">
+          확인 항목 · 신청 절차 불편 7곳
+        </div>
+
+      </article>
+
+      <article class="card output-card">
+
+        <span class="output-number">
+          OUTPUT 02
+        </span>
+
+        <h3>공고문 대조표</h3>
+
+        <p>
+          정책 공고문과 관련 조항을
+          비교하여 오류 항목과
+          확인 근거를 정리한 자료입니다.
+        </p>
+
+        <div class="output-evidence">
+          확인 항목 · 잘못된 조항 2곳
+        </div>
+
+      </article>
+
+      <article class="card output-card">
+
+        <span class="output-number">
+          OUTPUT 03
+        </span>
+
+        <h3>이용자 의견 반영표</h3>
+
+        <p>
+          청년정책 이용자의 의견을 분류하고,
+          검토할 개선 과제와 연결해
+          정리한 자료입니다.
+        </p>
+
+        <div class="output-evidence">
+          의견 수집 대상 · 이용자 5명
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="note">
+      산출물 원본 공개 여부: 입력 필요<br>
+      실제 개선안 채택 및 시행 여부: 입력 필요
+    </div>
+
+  </div>
+</section>
+
+<!-- 4. 사례 -->
+<section id="case" aria-labelledby="case-title">
+  <div class="container">
+
+    <span class="section-label">
+      03 · PROJECT CASE
+    </span>
+
+    <h2 id="case-title">
+      청년정책 신청 절차<br>
+      불편 점검 사례
+    </h2>
+
+    <p class="case-summary muted">
+      문제 → 한 일 → 결과의 순서로
+      사례를 정리했습니다.
+    </p>
+
+    <!-- 문제 -->
+    <article class="case-step">
+
+      <span class="step-number">
+        01 · 문제
+      </span>
+
+      <h3>신청 절차의 불편과 안내 오류</h3>
+
+      <p>
+        청년정책 신청 과정에서
+        이용자가 절차를 진행하기 어려운
+        지점이 있었고,
+        공고문의 일부 조항에도
+        오류가 있었습니다.
+      </p>
+
+    </article>
+
+    <!-- 한 일 -->
+    <article class="case-step">
+
+      <span class="step-number">
+        02 · 한 일
+      </span>
+
+      <h3>절차 점검 · 조항 대조 · 의견 수집</h3>
+
+      <p>
+        신청 절차를 단계별로 점검하고,
+        공고문과 관련 조항을 비교했습니다.
+        또한 이용자 의견을 수집하여
+        개선이 필요한 항목을 분류했습니다.
+      </p>
+
+      <div class="metric-grid">
+
+        <div class="metric">
+          <strong>7곳</strong>
+          <span>불편 지점</span>
+        </div>
+
+        <div class="metric">
+          <strong>2곳</strong>
+          <span>오류 조항</span>
+        </div>
+
+        <div class="metric">
+          <strong>5명</strong>
+          <span>의견 수집</span>
+        </div>
+
+      </div>
+
+    </article>
+
+    <!-- 결과 -->
+    <article class="case-step">
+
+      <span class="step-number">
+        03 · 결과
+      </span>
+
+      <h3>확인 사항을 산출물 3개로 정리</h3>
+
+      <p>
+        신청 절차의 불편은 문제 정의서,
+        조항 오류는 공고문 대조표,
+        이용자 의견은 의견 반영표로
+        구분하여 정리했습니다.
+      </p>
+
+      <div class="result-panel">
+
+        <strong>확인 가능한 결과</strong>
+
+        <p>
+          신청 절차 불편 7곳 확인<br>
+          잘못된 조항 2곳 확인<br>
+          이용자 5명 의견 수집
+        </p>
+
+      </div>
+
+      <p
+        class="muted"
+        style="font-size:16px;margin-top:20px;"
+      >
+        실제 제도 개선 완료 여부: 입력 필요<br>
+        개선 후 효과 측정값: 입력 필요
+      </p>
+
+    </article>
+
+  </div>
+</section>
+
+<!-- 5. 일하는 태도 -->
+<section
+  class="attitude"
+  id="attitude"
+  aria-labelledby="attitude-title"
+>
+  <div class="container">
+
+    <span class="section-label">
+      04 · WORK PRINCIPLES
+    </span>
+
+    <h2 id="attitude-title">
+      업무를 수행할 때<br>
+      지키는 세 가지 원칙
+    </h2>
+
+    <div class="stack">
+
+      <div class="attitude-item">
+
+        <strong>
+          01. 이용자의 신청 과정을 확인합니다.
+        </strong>
+
+        <p>
+          정책 안내문을 작성한 기관의 관점뿐 아니라
+          실제 신청하는 이용자의 관점에서
+          절차를 점검합니다.
+        </p>
+
+      </div>
+
+      <div class="attitude-item">
+
+        <strong>
+          02. 오류를 근거와 함께 기록합니다.
+        </strong>
+
+        <p>
+          확인한 사실과 의견을 구분하고,
+          공고문 및 관련 조항을 대조하여
+          검토 근거를 남깁니다.
+        </p>
+
+      </div>
+
+      <div class="attitude-item">
+
+        <strong>
+          03. 개선 과제를 문서로 전달합니다.
+        </strong>
+
+        <p>
+          이용자의 의견을 분류하고,
+          담당자 간 검토와 협의가 가능하도록
+          문제와 개선 과제를 연결해 정리합니다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 6. 연락처 -->
+<section
+  class="contact"
+  id="contact"
+  aria-labelledby="contact-title"
+>
+  <div class="container">
+
+    <span class="section-label">
+      05 · CONTACT
+    </span>
+
+    <h2 id="contact-title">
+      신청 과정의 문제를<br>
+      정책 개선 과제로 연결하겠습니다.
+    </h2>
+
+    <p class="muted">
+      문제 정의 · 결과 검증 · 협의와 실행<br>
+      세 가지 역량을 청년정책 업무에 활용하겠습니다.
+    </p>
+
+    <div class="contact-box">
+
+      <h3>지원 분야</h3>
+
+      <p>
+        <strong>
+          이음시 청년정책 담당
+        </strong>
+      </p>
+
+      <div class="privacy">
+        개인정보 보호를 위해
+        개인 연락처는 표시하지 않습니다.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    이음시 청년정책 담당 지원 포트폴리오<br>
+    문제 정의 · 결과 검증 · 협의와 실행
+  </div>
+</footer>
+
+<script>
+function showOutputs() {
+  const target = document.getElementById("outputs");
+
+  if (!target) return;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  target.scrollIntoView({
+    behavior: reduceMotion ? "auto" : "smooth",
+    block: "start"
+  });
+}
+</script>
+
+</body>
+</html>
